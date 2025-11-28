@@ -1,215 +1,203 @@
-<html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Лендинг: Хореограф, Гипнотренер, Топ-модель</title>
-  <style>
-    /* Сброс стилей */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Лендинг: Хореограф, Гипнотренер, Топ-модель</title>
+        <!-- Подключение Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            /* Установка шрифта Inter для всего документа */
+            @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+            body {
+                font-family: "Inter", sans-serif;
+                background-color: #f7f9fc; /* Светло-серый фон */
+                color: #1f2937; /* Темно-серый текст */
+            }
+            /* Уникальный акцент для секций */
+            .section-title {
+                position: relative;
+                display: inline-block;
+            }
+            .section-title::after {
+                content: "";
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                width: 70%;
+                height: 4px;
+                background-color: #4f46e5; /* Индиго (Фиолетовый) акцент */
+                border-radius: 9999px;
+            }
+        </style>
+    </head>
+    <body class="antialiased">
+        <!-- Hero Section / Header -->
+        <header class="bg-slate-900 text-white shadow-2xl">
+            <div
+                class="max-w-7xl mx-auto py-20 px-6 sm:px-8 lg:px-12 text-center"
+            >
+                <h1
+                    class="text-5xl sm:text-7xl font-extrabold mb-3 tracking-tight"
+                >
+                    Ольга Молодцова
+                </h1>
+                <p
+                    class="text-xl sm:text-2xl font-light text-pink-300 italic tracking-wide"
+                >
+                    Хореограф | Гипнотренер по стройности | Топ и Фото модель
+                </p>
+                <a
+                    href="#contact"
+                    class="mt-8 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105"
+                >
+                    Начать преображение
+                </a>
+            </div>
+        </header>
 
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background: #fff;
-    }
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <!-- About Me Section -->
+            <section id="about" class="mb-20">
+                <h2
+                    class="text-4xl font-extrabold mb-8 text-gray-800 section-title"
+                >
+                    Обо мне
+                </h2>
+                <div
+                    class="bg-white p-8 sm:p-10 rounded-2xl shadow-xl border-t-4 border-indigo-600"
+                >
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Привет! Я Ольга – профессиональный хореограф,
+                        сертифицированный гипнотренер по стройности и топ-модель
+                        с многолетним опытом. Моя миссия — это **комплексное
+                        преображение**: я помогаю найти гармонию тела и души
+                        через движение, работу с подсознанием и формирование
+                        уверенности. Достигайте своих целей на сцене, в жизни и
+                        перед камерой.
+                    </p>
+                </div>
+            </section>
 
-    header {
-      background: #222;
-      color: #eee;
-      padding: 40px 20px;
-      text-align: center;
-    }
+            <!-- Services Section -->
+            <section id="services" class="mb-20">
+                <h2
+                    class="text-4xl font-extrabold mb-12 text-gray-800 section-title"
+                >
+                    Услуги
+                </h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Service Card 1: Choreography (Pink accent) -->
+                    <div
+                        class="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl border-l-4 border-pink-500 transition duration-300 transform hover:translate-y-[-5px]"
+                    >
+                        <h3 class="text-2xl font-bold mb-3 text-pink-600">
+                            Хореография
+                        </h3>
+                        <p class="text-gray-600">
+                            Индивидуальные и групповые занятия по современным
+                            направлениям танца (контемпорари, джаз-фанк).
+                            Развивайте пластику, ритм и чувственность.
+                        </p>
+                    </div>
 
-    header h1 {
-      font-size: 2.8em;
-      margin-bottom: 10px;
-      font-weight: 700;
-    }
+                    <!-- Service Card 2: Hypnotherapy (Teal accent) -->
+                    <div
+                        class="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl border-l-4 border-teal-500 transition duration-300 transform hover:translate-y-[-5px]"
+                    >
+                        <h3 class="text-2xl font-bold mb-3 text-teal-600">
+                            Гипнотерапия по стройности
+                        </h3>
+                        <p class="text-gray-600">
+                            Работа с подсознанием для достижения желаемого веса
+                            без изнуряющих диет и стрессов. Измените привычки
+                            питания и повысьте внутреннюю мотивацию.
+                        </p>
+                    </div>
 
-    header p {
-      font-size: 1.2em;
-      font-style: italic;
-    }
+                    <!-- Service Card 3: Modeling (Violet/Indigo accent) -->
+                    <div
+                        class="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl border-l-4 border-indigo-500 transition duration-300 transform hover:translate-y-[-5px]"
+                    >
+                        <h3 class="text-2xl font-bold mb-3 text-indigo-600">
+                            Фото и модельные тренинги
+                        </h3>
+                        <p class="text-gray-600">
+                            Профессиональная подготовка к фотосессиям, обучение
+                            позированию, мимике и обретению полной уверенности
+                            перед камерой.
+                        </p>
+                    </div>
+                </div>
+            </section>
 
-    main {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
+            <!-- Portfolio Section -->
+            <section id="portfolio" class="photo-model mb-20">
+                <h2
+                    class="text-4xl font-extrabold mb-12 text-gray-800 section-title"
+                >
+                    Портфолио
+                </h2>
+                <div class="max-w-3xl mx-auto">
+                    <img
+                        src="https://placehold.co/900x550/4f46e5/ffffff?text=Professional+Photo+Placeholder"
+                        alt="Ольга Молодцова - фото"
+                        class="w-full h-auto object-cover rounded-3xl shadow-2xl shadow-indigo-600/50 transition duration-500 hover:shadow-pink-500/50 hover:scale-[1.01] cursor-pointer"
+                    />
+                </div>
 
-    section {
-      margin-bottom: 60px;
-    }
+                <p
+                    class="text-center text-lg text-gray-600 mt-6 max-w-2xl mx-auto"
+                >
+                    Несколько ярких моментов моей работы и жизни за кадром
+                    профессионального творчества.
+                </p>
+            </section>
 
-    section h2 {
-      font-size: 2em;
-      color: #222;
-      margin-bottom: 20px;
-      border-bottom: 3px solid #f04e30;
-      display: inline-block;
-      padding-bottom: 5px;
-    }
+            <!-- Contact Section -->
+            <section id="contact" class="contact">
+                <div
+                    class="bg-slate-800 text-white p-10 sm:p-16 rounded-3xl shadow-2xl shadow-slate-900/60 text-center"
+                >
+                    <h2 class="text-4xl font-bold mb-4 text-indigo-600">
+                        Начните путь к гармонии
+                    </h2>
+                    <p class="text-xl font-light mb-8 max-w-xl mx-auto">
+                        Готовы изменить свое тело, мышление и уверенность?
+                        Свяжитесь со мной, чтобы обсудить индивидуальную
+                        программу.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a
+                            href="mailto:olga@example.com"
+                            class="bg-indigo-600 hover:bg-white hover:text-indigo-600 text-white font-semibold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-md"
+                        >
+                            Написать email
+                        </a>
+                        <a
+                            href="tel:+79001234567"
+                            class="bg-transparent border-2 border-white hover:bg-white hover:text-slate-800 text-white font-semibold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-md"
+                        >
+                            WhatsApp +35797851875
+                        </a>
+                        <a
+                            href="https://instagram.com/olga_molodtsova"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-md"
+                        >
+                            Instagram
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
 
-    .services {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: space-around;
-    }
-
-    .service {
-      flex: 1 1 300px;
-      background: #f8f8f8;
-      border-radius: 12px;
-      padding: 30px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
-
-    .service:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    }
-
-    .service h3 {
-      margin-bottom: 15px;
-      color: #f04e30;
-    }
-
-    .service p {
-      font-size: 1.1em;
-      line-height: 1.5;
-      color: #555;
-    }
-
-    .photo-model {
-      text-align: center;
-    }
-
-    .photo-model img {
-     : 350px;
-      width: 100%;
-      border-radius: 20px;
-      box-shadow: 0 6px 20px rgba(240, 78, 48, 0.3);
-      margin-bottom: 20px;
-      transition: transform 0.3s ease;
-      cursor: pointer;
-    }
-
-    .photo-model img:hover {
-      transform: scale(1.05);
-    }
-
-    .contact {
-      background: #f04e30;
-      color: #fff;
-      padding: 40px 20px;
-      text-align: center;
-      border-radius: 15px;
-    }
-
-    .contact h2 {
-      margin-bottom: 20px;
-      color: #fff;
-    }
-
-    .contact p {
-      font-size: 1.2em;
-      margin-bottom: 30px;
-    }
-
-    .contact a {
-      display: inline-block;
-      margin: 0 10px;
-      color: #fff;
-      font-weight: 700;
-      text-decoration: none;
-      background: rgba(255 255 255 / 0.2);
-      padding: 10px 20px;
-      border-radius: 40px;
-      transition: background 0.3s ease;
-    }
-
-    .contact a:hover {
-      background: #fff;
-      color: #f04e30;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #999;
-      font-size: 0.9em;
-      background: #f0f0f0;
-    }
-
-    @media (max-width: 700px) {
-      .services {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <h1>Ольга Молодцова</h1>
-    <p>Хореограф | Гипнотренер по стройности | Топ и Фото модель</p>
-  </header>
-
-  <main>
-
-    <section id="about">
-      <h2>Обо мне</h2>
-      <p>Привет! Я Анна – профессиональный хореограф, сертифицированный гипнотренер по стройности и топ-модель с многолетним опытом. Помогаю найти гармонию тела и души через движение и внутреннюю работу над собой.</p>
-    </section>
-
-    <section id="services">
-      <h2>Услуги</h2>
-      <div class="services">
-        <div class="service">
-          <h3>Хореография</h3>
-          <p>Индивидуальные и групповые занятия по современным направлениям танца. Развивайте пластику и чувственность, достигайте высот на сцене и в жизни.</p>
-        </div>
-        <div class="service">
-          <h3>Гипнотерапия по стройности</h3>
-          <p>Работа с подсознанием для достижения желаемого веса без диет и стрессов. Помогаю изменить привычки питания и повысить мотивацию.</p>
-        </div>
-        <div class="service">
-          <h3>Фото и модельные тренинги</h3>
-          <p>Подготовка к фотосессиям, обучение позированию и уверенности перед камерой. Помогаю раскрыть вашу уникальную красоту.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="portfolio" class="photo-model">
-      <h2>Портфолио</h2>
-      <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=500&q=80" alt="Анна Иванова - фото" />
-
-      <p>Несколько ярких моментов моей работы и жизни за кадром профессионального творчества.</p>
-    </section>
-
-    <section id="contact" class="contact">
-      <h2>Контакты</h2>
-      <p>Готовы начать вместе? Свяжитесь со мной!</p>
-      <a href="mailto:anna@example.com">Написать email</a>
-      <a href="tel:+79001234567">Позвонить</a>
-      <a href="https://instagram.com/anna_ivanova" target="_blank" rel="noopener noreferrer">Instagram</a>
-    </section>
-
-  </main>
-
-  <footer>
-    &copy; 2024 Анна Иванова. Все права защищены.
-  </footer>
-
-</body>
+        <!-- Footer -->
+        <footer class="bg-gray-100 text-center py-6 border-t border-gray-200">
+            <p class="text-sm text-gray-500">
+                &copy; 2024 Ольга Молодцова. Все права защищены.
+            </p>
+        </footer>
+    </body>
 </html>
