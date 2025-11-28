@@ -1,282 +1,215 @@
+<html
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ольга Молодцова | Хореограф, Гипнотренер, Топ-модель</title>
-  
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-  
-  <style>
-    /* --- Переменные и Сброс --- */
-    :root {
-      --color-dark: #1a1a1a; 
-      --color-accent: #b8860b; /* Золотой акцент */
-      --color-light-bg: #f7f7f7;
-      --color-text: #444;
-      --font-heading: 'Playfair Display', serif;
-      --font-body: 'Lato', sans-serif;
-    }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Лендинг: Хореограф, Гипнотренер, Топ-модель</title>
+  <style>
+    /* Сброс стилей */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #fff;
+    }
 
-    body {
-      font-family: var(--font-body);
-      line-height: 1.7;
-      color: var(--color-text);
-      background: #fff;
-      transition: background-color 0.5s ease;
-    }
+    header {
+      background: #222;
+      color: #eee;
+      padding: 40px 20px;
+      text-align: center;
+    }
 
-    /* --- HEADER: Величественная шапка с тенью --- */
-    header {
-      background: var(--color-dark);
-      color: #f0f0f0;
-      padding: 80px 20px 60px; /* Увеличим отступы */
-      text-align: center;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Глубокая тень */
-      position: relative;
-    }
+    header h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
 
-    header h1 {
-      font-family: var(--font-heading);
-      font-size: 3.8em;
-      margin-bottom: 15px;
-      font-weight: 700;
-      color: var(--color-accent); /* Золотой акцент */
-      letter-spacing: 2px;
-    }
+    header p {
+      font-size: 1.2em;
+      font-style: italic;
+    }
 
-    header p {
-      font-size: 1.4em;
-      font-style: italic;
-      opacity: 0.8;
-      font-weight: 300;
-    }
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
 
-    /* --- MAIN: Контейнер --- */
-    main {
-      max-width: 1100px;
-      margin: 60px auto;
-      padding: 0 30px;
-    }
+    section {
+      margin-bottom: 60px;
+    }
 
-    section {
-      margin-bottom: 80px; /* Больше воздуха */
-      padding: 20px 0;
-    }
+    section h2 {
+      font-size: 2em;
+      color: #222;
+      margin-bottom: 20px;
+      border-bottom: 3px solid #f04e30;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
 
-    section h2 {
-      font-family: var(--font-heading);
-      font-size: 2.8em;
-      color: var(--color-dark);
-      margin-bottom: 30px;
-      border-bottom: 3px solid var(--color-accent); /* Золотая линия */
-      display: inline-block;
-      padding-bottom: 8px;
-      font-weight: 400;
-    }
-    
-    #about p {
-      font-size: 1.15em;
-    }
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: space-around;
+    }
 
-    /* --- SERVICES: Карточки --- */
-    .services {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px; /* Увеличим зазор */
-      justify-content: space-between;
-    }
+    .service {
+      flex: 1 1 300px;
+      background: #f8f8f8;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
 
-    .service {
-      flex: 1 1 300px;
-      background: var(--color-light-bg);
-      border-radius: 15px;
-      padding: 40px; /* Увеличим внутренний отступ */
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Мягкая тень */
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-      border-top: 5px solid var(--color-accent); /* Золотая полоса сверху */
-    }
+    .service:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
 
-    .service:hover {
-      transform: translateY(-12px) scale(1.02);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-    }
+    .service h3 {
+      margin-bottom: 15px;
+      color: #f04e30;
+    }
 
-    .service h3 {
-      font-family: var(--font-heading);
-      font-size: 1.8em;
-      margin-bottom: 15px;
-      color: var(--color-dark);
-    }
+    .service p {
+      font-size: 1.1em;
+      line-height: 1.5;
+      color: #555;
+    }
 
-    .service p {
-      font-size: 1.05em;
-      line-height: 1.6;
-      color: var(--color-text);
-    }
+    .photo-model {
+      text-align: center;
+    }
 
-    /* --- PORTFOLIO: Изображение --- */
-    .photo-model {
-      text-align: center;
-    }
+    .photo-model img {
+     : 350px;
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(240, 78, 48, 0.3);
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
 
-    .photo-model img {
-      height: auto; /* Исправлена опечатка и добавлена адаптивность */
-      max-width: 100%;
-      width: 500px; /* Ограничим ширину для большего эффекта */
-      border-radius: 5px; /* Менее округлые, более строгие углы */
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Глубокая тень */
-      margin-bottom: 30px;
-      border: 5px solid #fff; /* Рамка */
-      outline: 1px solid var(--color-accent); /* Тонкий золотой контур */
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-      cursor: pointer;
-    }
+    .photo-model img:hover {
+      transform: scale(1.05);
+    }
 
-    .photo-model img:hover {
-      transform: scale(1.02);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
-    }
-    
-    .photo-model p {
-    	font-style: italic;
-    	color: #999;
-    }
+    .contact {
+      background: #f04e30;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+      border-radius: 15px;
+    }
 
+    .contact h2 {
+      margin-bottom: 20px;
+      color: #fff;
+    }
 
-    /* --- CONTACT: Секция с призывом --- */
-    .contact {
-      background: var(--color-dark); /* Темный фон */
-      color: #fff;
-      padding: 60px 20px;
-      text-align: center;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    }
+    .contact p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
 
-    .contact h2 {
-      margin-bottom: 25px;
-      color: var(--color-accent); /* Золотой заголовок */
-      border-bottom: none;
-      font-size: 2.5em;
-    }
+    .contact a {
+      display: inline-block;
+      margin: 0 10px;
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+      background: rgba(255 255 255 / 0.2);
+      padding: 10px 20px;
+      border-radius: 40px;
+      transition: background 0.3s ease;
+    }
 
-    .contact p {
-      font-size: 1.3em;
-      margin-bottom: 40px;
-      opacity: 0.9;
-    }
+    .contact a:hover {
+      background: #fff;
+      color: #f04e30;
+    }
 
-    .contact a {
-      display: inline-block;
-      margin: 0 15px;
-      color: var(--color-accent);
-      font-weight: 700;
-      text-decoration: none;
-      background: rgba(255, 255, 255, 0.1);
-      padding: 12px 25px;
-      border: 2px solid var(--color-accent); /* Золотая рамка */
-      border-radius: 40px;
-      transition: background 0.3s ease, color 0.3s ease;
-      letter-spacing: 0.5px;
-    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #999;
+      font-size: 0.9em;
+      background: #f0f0f0;
+    }
 
-    .contact a:hover {
-      background: var(--color-accent);
-      color: var(--color-dark);
-    }
-
-    /* --- FOOTER --- */
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: #aaa;
-      font-size: 0.9em;
-      background: var(--color-dark);
-      border-top: 1px solid var(--color-accent);
-    }
-
-    /* --- Адаптивность --- */
-    @media (max-width: 800px) {
-      header h1 {
-        font-size: 2.8em;
-      }
-      section h2 {
-        font-size: 2em;
-    	}
-      .services {
-        flex-direction: column;
-        align-items: center;
-      }
-      .service {
-      	flex: 1 1 100%;
-      	max-width: 90%;
-      }
-      .contact a {
-      	display: block;
-      	margin: 15px auto;
-      }
-    }
-  </style>
+    @media (max-width: 700px) {
+      .services {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <header>
-    <h1>Ольга Молодцова</h1>
-    <p>Искусство Движения • Трансформация Сознания • Эталон Красоты</p>
-  </header>
+  <header>
+    <h1>Ольга Молодцова</h1>
+    <p>Хореограф | Гипнотренер по стройности | Топ и Фото модель</p>
+  </header>
 
-  <main>
+  <main>
 
-    <section id="about">
-      <h2>Обо мне</h2>
-      <p>Приветствую! Я, Ольга Молодцова – **профессиональный хореограф** с мировым именем, **сертифицированный гипнотренер по стройности**, чьи методики меняют жизнь, и **топ-модель** с многолетним опытом работы в индустрии моды. Моя миссия — не просто обучать, а вдохновлять на **абсолютную гармонию тела и души** через осознанное движение и глубокую внутреннюю работу. Достигните совершенства в любой сфере под моим наставничеством.</p>
-    </section>
+    <section id="about">
+      <h2>Обо мне</h2>
+      <p>Привет! Я Анна – профессиональный хореограф, сертифицированный гипнотренер по стройности и топ-модель с многолетним опытом. Помогаю найти гармонию тела и души через движение и внутреннюю работу над собой.</p>
+    </section>
 
-    <section id="services">
-      <h2>Услуги и Наставничество</h2>
-      <div class="services">
-        <div class="service">
-          <h3>Хореография и Пластика</h3>
-          <p>Эксклюзивные индивидуальные программы и мастер-классы по современным направлениям танца. Мы откроем вашу внутреннюю грацию, поставим потрясающие номера и выведем вашу пластику на сцену жизни.</p>
-        </div>
-        <div class="service">
-          <h3>Гипнотрансформация Стройности</h3>
-          <p>Проверенная гипнотерапия для устойчивого достижения идеального веса. Работа с подсознанием, которая устраняет причины переедания, меняет пищевые привычки и повышает мотивацию без диет, ограничений и стресса.</p>
-        </div>
-        <div class="service">
-          <h3>Искусство Позирования и Фототренинги</h3>
-          <p>Мастер-классы от топ-модели. Вы научитесь чувствовать камеру, овладеете искусством позирования, создадите внушительное портфолио и приобретёте ту самую уверенность, которая покоряет любые вершины.</p>
-        </div>
-      </div>
-    </section>
+    <section id="services">
+      <h2>Услуги</h2>
+      <div class="services">
+        <div class="service">
+          <h3>Хореография</h3>
+          <p>Индивидуальные и групповые занятия по современным направлениям танца. Развивайте пластику и чувственность, достигайте высот на сцене и в жизни.</p>
+        </div>
+        <div class="service">
+          <h3>Гипнотерапия по стройности</h3>
+          <p>Работа с подсознанием для достижения желаемого веса без диет и стрессов. Помогаю изменить привычки питания и повысить мотивацию.</p>
+        </div>
+        <div class="service">
+          <h3>Фото и модельные тренинги</h3>
+          <p>Подготовка к фотосессиям, обучение позированию и уверенности перед камерой. Помогаю раскрыть вашу уникальную красоту.</p>
+        </div>
+      </div>
+    </section>
 
-    <section id="portfolio" class="photo-model">
-      <h2>Галерея Образов</h2>
-            <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=800&q=80" alt="Ольга Молодцова - Портрет" />
+    <section id="portfolio" class="photo-model">
+      <h2>Портфолио</h2>
+      <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=500&q=80" alt="Анна Иванова - фото" />
 
-      <p>Моменты, запечатлевшие силу, грацию и творческую энергию.</p>
-    </section>
+      <p>Несколько ярких моментов моей работы и жизни за кадром профессионального творчества.</p>
+    </section>
 
-    <section id="contact" class="contact">
-      <h2>Сделайте Шаг к Совершенству</h2>
-      <p>Ваш путь к абсолютной уверенности и гармонии начинается здесь. Запишитесь на консультацию.</p>
-      <a href="mailto:olga@example.com">Написать в E-mail</a>
-      <a href="tel:+79001234567">Прямой Звонок</a>
-      <a href="https://instagram.com/olga_molodtsova" target="_blank" rel="noopener noreferrer">Instagram (Портфолио)</a>
-    </section>
+    <section id="contact" class="contact">
+      <h2>Контакты</h2>
+      <p>Готовы начать вместе? Свяжитесь со мной!</p>
+      <a href="mailto:anna@example.com">Написать email</a>
+      <a href="tel:+79001234567">Позвонить</a>
+      <a href="https://instagram.com/anna_ivanova" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </section>
 
-  </main>
+  </main>
 
-  <footer>
-    &copy; 2024 Ольга Молодцова. Искусство быть лучшей. Все права защищены.
-  </footer>
+  <footer>
+    &copy; 2024 Анна Иванова. Все права защищены.
+  </footer>
 
 </body>
 </html>
