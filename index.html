@@ -1,202 +1,268 @@
+
 <!doctype html>
 <html lang="ru">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Лендинг: Хореограф, Гипнотренер, Топ-модель</title>
+        <title>Студия танца "Грация" | Твоя лучшая версия ждёт тебя!</title>
         <!-- Подключение Tailwind CSS -->
         <script src="https://cdn.tailwindcss.com"></script>
         <style>
-            /* Установка шрифта Inter для всего документа */
+            /* Установка шрифта Inter */
             @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
             body {
                 font-family: "Inter", sans-serif;
-                background-color: #f7f9fc; /* Светло-серый фон */
-                color: #1f2937; /* Темно-серый текст */
+                background-color: #f8fafc; /* light blue-gray background */
             }
-            /* Уникальный акцент для секций */
-            .section-title {
-                position: relative;
-                display: inline-block;
+            /* Custom gradient for CTA button */
+            .cta-button {
+                background: linear-gradient(
+                    90deg,
+                    #ec4899 0%,
+                    #a855f7 100%
+                ); /* Pink to Violet */
+                transition: all 0.3s ease;
             }
-            .section-title::after {
-                content: "";
-                position: absolute;
-                bottom: -5px;
-                left: 0;
-                width: 70%;
-                height: 4px;
-                background-color: #4f46e5; /* Индиго (Фиолетовый) акцент */
-                border-radius: 9999px;
+            .cta-button:hover {
+                transform: scale(1.05);
+                box-shadow:
+                    0 10px 15px -3px rgba(168, 85, 247, 0.5),
+                    0 4px 6px -2px rgba(168, 85, 247, 0.5);
             }
         </style>
     </head>
-    <body class="antialiased">
-        <!-- Hero Section / Header -->
-        <header class="bg-slate-900 text-white shadow-2xl">
+    <body class="antialiased text-gray-800">
+        <!-- Header & Hero Section -->
+        <header class="bg-indigo-900 text-white shadow-xl">
             <div
-                class="max-w-7xl mx-auto py-20 px-6 sm:px-8 lg:px-12 text-center"
+                class="max-w-6xl mx-auto py-16 px-4 sm:px-6 lg:px-8 text-center"
             >
                 <h1
-                    class="text-5xl sm:text-7xl font-extrabold mb-3 tracking-tight"
+                    class="text-6xl sm:text-8xl font-extrabold mb-3 tracking-tighter text-pink-300"
                 >
-                    Ольга Молодцова
+                    ГРАЦИЯ
                 </h1>
-                <p
-                    class="text-xl sm:text-2xl font-light text-pink-300 italic tracking-wide"
-                >
-                    Хореограф | Гипнотренер по стройности | Топ и Фото модель
+                <p class="text-xl sm:text-3xl font-light italic mt-4 mb-8">
+                    Твоя лучшая версия ждёт тебя!
+                </p>
+                <p class="text-lg text-indigo-200 max-w-2xl mx-auto">
+                    Хочешь не просто танцевать, но и полностью изменить свое
+                    тело, осанку и внутреннее ощущение себя?
                 </p>
                 <a
-                    href="#contact"
-                    class="mt-8 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105"
+                    href="#cta"
+                    class="cta-button mt-10 inline-block text-white font-bold py-4 px-10 rounded-full shadow-lg"
                 >
-                    Начать преображение
+                    Открываем запись в НОВЫЕ ГРУППЫ для девушек!
                 </a>
             </div>
         </header>
 
-        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <!-- About Me Section -->
-            <section id="about" class="mb-20">
+        <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <!-- Introduction Section -->
+            <section class="text-center mb-20">
                 <h2
-                    class="text-4xl font-extrabold mb-8 text-gray-800 section-title"
+                    class="text-3xl sm:text-4xl font-extrabold mb-6 text-indigo-700"
                 >
-                    Обо мне
+                    4 Ключевых Направления Твоей Трансформации
                 </h2>
-                <div
-                    class="bg-white p-8 sm:p-10 rounded-2xl shadow-xl border-t-4 border-indigo-600"
-                >
-                    <p class="text-lg text-gray-700 leading-relaxed">
-                        Привет! Я Ольга – профессиональный хореограф,
-                        сертифицированный гипнотренер по стройности и топ-модель
-                        с многолетним опытом. Моя миссия — это **комплексное
-                        преображение**: я помогаю найти гармонию тела и души
-                        через движение, работу с подсознанием и формирование
-                        уверенности. Достигайте своих целей на сцене, в жизни и
-                        перед камерой.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Services Section -->
-            <section id="services" class="mb-20">
-                <h2
-                    class="text-4xl font-extrabold mb-12 text-gray-800 section-title"
-                >
-                    Услуги
-                </h2>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Service Card 1: Choreography (Pink accent) -->
-                    <div
-                        class="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl border-l-4 border-pink-500 transition duration-300 transform hover:translate-y-[-5px]"
-                    >
-                        <h3 class="text-2xl font-bold mb-3 text-pink-600">
-                            Хореография
-                        </h3>
-                        <p class="text-gray-600">
-                            Индивидуальные и групповые занятия по современным
-                            направлениям танца (контемпорари, джаз-фанк).
-                            Развивайте пластику, ритм и чувственность.
-                        </p>
-                    </div>
-
-                    <!-- Service Card 2: Hypnotherapy (Teal accent) -->
-                    <div
-                        class="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl border-l-4 border-teal-500 transition duration-300 transform hover:translate-y-[-5px]"
-                    >
-                        <h3 class="text-2xl font-bold mb-3 text-teal-600">
-                            Гипнотерапия по стройности
-                        </h3>
-                        <p class="text-gray-600">
-                            Работа с подсознанием для достижения желаемого веса
-                            без изнуряющих диет и стрессов. Измените привычки
-                            питания и повысьте внутреннюю мотивацию.
-                        </p>
-                    </div>
-
-                    <!-- Service Card 3: Modeling (Violet/Indigo accent) -->
-                    <div
-                        class="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl border-l-4 border-indigo-500 transition duration-300 transform hover:translate-y-[-5px]"
-                    >
-                        <h3 class="text-2xl font-bold mb-3 text-indigo-600">
-                            Фото и модельные тренинги
-                        </h3>
-                        <p class="text-gray-600">
-                            Профессиональная подготовка к фотосессиям, обучение
-                            позированию, мимике и обретению полной уверенности
-                            перед камерой.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Portfolio Section -->
-            <section id="portfolio" class="photo-model mb-20">
-                <h2
-                    class="text-4xl font-extrabold mb-12 text-gray-800 section-title"
-                >
-                    Портфолио
-                </h2>
-                <div class="max-w-3xl mx-auto">
-                    <img
-                        src="https://placehold.co/900x550/4f46e5/ffffff?text=Professional+Photo+Placeholder"
-                        alt="Ольга Молодцова - фото"
-                        class="w-full h-auto object-cover rounded-3xl shadow-2xl shadow-indigo-600/50 transition duration-500 hover:shadow-pink-500/50 hover:scale-[1.01] cursor-pointer"
-                    />
-                </div>
-
-                <p
-                    class="text-center text-lg text-gray-600 mt-6 max-w-2xl mx-auto"
-                >
-                    Несколько ярких моментов моей работы и жизни за кадром
-                    профессионального творчества.
+                <p class="text-xl text-gray-600 max-w-4xl mx-auto">
+                    В нашей студии **"Грация"** мы собрали 4 ключевых
+                    направления, которые помогут тебе стать **гибкой, сильной,
+                    уверенной и невероятно женственной!**
                 </p>
             </section>
 
-            <!-- Contact Section -->
-            <section id="contact" class="contact">
+            <!-- Directions / Services Grid -->
+            <section id="directions" class="grid md:grid-cols-2 gap-10">
+                <!-- 1. Огонь и Страсть (Latin) -->
                 <div
-                    class="bg-slate-800 text-white p-10 sm:p-16 rounded-3xl shadow-2xl shadow-slate-900/60 text-center"
+                    class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-pink-500 hover:shadow-2xl transition duration-300"
                 >
-                    <h2 class="text-4xl font-bold mb-4 text-indigo-600">
-                        Начните путь к гармонии
-                    </h2>
-                    <p class="text-xl font-light mb-8 max-w-xl mx-auto">
-                        Готовы изменить свое тело, мышление и уверенность?
-                        Свяжитесь со мной, чтобы обсудить индивидуальную
-                        программу.
+                    <h3
+                        class="text-2xl font-bold mb-3 text-pink-600 flex items-center"
+                    >
+                        <span class="text-3xl mr-3">🎶</span> Огонь и Страсть
+                    </h3>
+                    <p class="text-gray-500 italic mb-4">
+                        Сальса, Бачата, Румба — чистый флирт и удовольствие!
                     </p>
-                    <div class="flex flex-col sm:flex-row justify-center gap-4">
-                        <a
-                            href="mailto:olga@example.com"
-                            class="bg-indigo-600 hover:bg-white hover:text-indigo-600 text-white font-semibold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-md"
+                    <ul class="space-y-3 text-gray-700">
+                        <li
+                            class="pl-4 relative before:content-['•'] before:absolute before:left-0 before:text-pink-500"
                         >
-                            Написать email
-                        </a>
-                        <a
-                            href="tel:+79001234567"
-                            class="bg-transparent border-2 border-white hover:bg-white hover:text-slate-800 text-white font-semibold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-md"
+                            **Бачата:** Раскроет твою чувственность и пластику
+                            бедер.
+                        </li>
+                        <li
+                            class="pl-4 relative before:content-['•'] before:absolute before:left-0 before:text-pink-500"
                         >
-                            WhatsApp +35797851875
-                        </a>
-                        <a
-                            href="https://instagram.com/olga_molodtsova"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-md"
+                            **Сальса:** Зарядит энергией, улучшит координацию и
+                            подарит огонь в глазах.
+                        </li>
+                        <li
+                            class="pl-4 relative before:content-['•'] before:absolute before:left-0 before:text-pink-500"
                         >
-                            Instagram
-                        </a>
+                            **Результат:** Уверенность на любой вечеринке и
+                            сильный, сексуальный корпус.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 2. Грация и Осанка (Body Ballet) -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-indigo-500 hover:shadow-2xl transition duration-300"
+                >
+                    <h3
+                        class="text-2xl font-bold mb-3 text-indigo-600 flex items-center"
+                    >
+                        <span class="text-3xl mr-3">🦢</span> Грация и Осанка
+                    </h3>
+                    <p class="text-gray-500 italic mb-4">
+                        Body Ballet для взрослых — мечты о балетной осанке
+                        становятся реальностью!
+                    </p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li
+                            class="pl-4 relative before:content-['•'] before:absolute before:left-0 before:text-indigo-500"
+                        >
+                            Идеально вытягивает мышцы, укрепляет корсет.
+                        </li>
+                        <li
+                            class="pl-4 relative before:content-['•'] before:absolute before:left-0 before:text-indigo-500"
+                        >
+                            Делает движения плавными и грациозными, без ударной
+                            нагрузки на суставы.
+                        </li>
+                        <li
+                            class="pl-4 relative before:content-['•'] before:absolute before:left-0 before:text-indigo-500"
+                        >
+                            **Результат:** Лебединая шея, ровная спина и
+                            подтянутые, длинные мышцы.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 3. Гибкость и Легкость (Stretching) -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-green-500 hover:shadow-2xl transition duration-300"
+                >
+                    <h3
+                        class="text-2xl font-bold mb-3 text-green-600 flex items-center"
+                    >
+                        <span class="text-3xl mr-3">🧘‍♀️</span> Гибкость и
+                        Легкость
+                    </h3>
+                    <p class="text-gray-500 italic mb-4">
+                        Растяжка — забудь о боли в спине и скованности!
+                    </p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li
+                            class="pl-4 relative before:content-['•'] before:absolute before:left-0 before:text-green-500"
+                        >
+                            Снимает стресс, улучшает кровообращение.
+                        </li>
+                        <li
+                            class="pl-4 relative before:content-['•'] before:absolute before:left-0 before:text-green-500"
+                        >
+                            Помогает сесть на шпагат без травм и насилия над
+                            телом.
+                        </li>
+                        <li
+                            class="pl-4 relative before:content-['•'] before:absolute before:left-0 before:text-green-500"
+                        >
+                            **Результат:** Здоровое, гибкое тело и невероятное
+                            чувство легкости после каждого занятия.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 4. Стиль и Магнетизм (Lady Style) -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-yellow-500 hover:shadow-2xl transition duration-300"
+                >
+                    <h3
+                        class="text-2xl font-bold mb-3 text-yellow-600 flex items-center"
+                    >
+                        <span class="text-3xl mr-3">✨</span> Стиль и Магнетизм
+                    </h3>
+                    <p class="text-gray-500 italic mb-4">
+                        Lady Style — научись управлять взглядами!
+                    </p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li
+                            class="pl-4 relative before:content-['•'] before:absolute before:left-0 before:text-yellow-500"
+                        >
+                            Работа над подачей, артистизмом, красивыми
+                            проходками и пластикой рук.
+                        </li>
+                        <li
+                            class="pl-4 relative before:content-['•'] before:absolute before:left-0 before:text-yellow-500"
+                        >
+                            Уроки, которые делают тебя звездой на любом
+                            танцполе.
+                        </li>
+                        <li
+                            class="pl-4 relative before:content-['•'] before:absolute before:left-0 before:text-yellow-500"
+                        >
+                            **Результат:** Умение носить каблуки, чувствовать
+                            ритм и всегда выглядеть сногсшибательно.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Final CTA Section -->
+            <section
+                id="cta"
+                class="mt-20 py-12 px-6 sm:px-10 rounded-3xl bg-slate-900 text-center shadow-2xl"
+            >
+                <h2
+                    class="text-4xl font-bold mb-4 text-pink-500 flex items-center justify-center"
+                >
+                    <span class="text-5xl mr-3 animate-pulse">🔥</span> НОВЫЕ
+                    ГРУППЫ СТАРТУЮТ УЖЕ С ДЕКАБРЯ!
+                </h2>
+                <p class="text-xl text-indigo-200 mb-8 max-w-3xl mx-auto">
+                    Места в группах для новичков ограничены! Не откладывай свою
+                    мечту!
+                </p>
+
+                <!-- CTA Steps -->
+                <div class="flex flex-col sm:flex-row justify-center gap-6">
+                    <!-- Step 1 -->
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-lg border-b-4 border-indigo-500 sm:w-1/3"
+                    >
+                        <p class="text-2xl font-extrabold text-indigo-700 mb-2">
+                            1️⃣ Выбери
+                        </p>
+                        <p class="text-gray-600">
+                            Выбирай свой пакет и записывайся!
+                        </p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-lg border-b-4 border-pink-500 sm:w-1/3"
+                    >
+                        <p class="text-2xl font-extrabold text-pink-700 mb-2">
+                            2️⃣ Напиши
+                        </p>
+                        <p class="text-gray-600">
+                            Напиши нам по **WHATSAPP (97851875)** слово
+                            **«ТРАНСФОРМАЦИЯ»** — мы вышлем расписание и
+                            стоимость абонементов.
+                        </p>
                     </div>
                 </div>
             </section>
         </main>
 
         <!-- Footer -->
-        <footer class="bg-gray-100 text-center py-6 border-t border-gray-200">
+        <footer class="bg-gray-200 text-center py-6 mt-16">
             <p class="text-sm text-gray-500">
-                &copy; 2024 Ольга Молодцова. Все права защищены.
+                Студия танца "Грация". Ваш путь к гибкости и уверенности.
             </p>
         </footer>
     </body>
